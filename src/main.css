@@ -1,0 +1,84 @@
+@keyframes buttonAnimation {
+    0% {box-shadow: 0 0 20px red; transform: scale(1);}
+    100% {box-shadow: 0 0 40px deeppink, 0 0 120px pink; transform: scale(1.05);}
+}
+@keyframes buttonAbyss {
+    0% {transform: scale(1) rotate(0deg);}
+    100% {transform: scale(0) rotate(1440deg);}
+}
+@keyframes whenAnimation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes bodyAnimation {
+    0% {background-position: 0 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+            135deg,
+            #120018,
+            #2b0038,
+            #4a0d67,
+            #1b0026
+    );
+    background-size: 400% 400%;
+    animation: bodyAnimation 12s ease infinite;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 95vh;
+}
+.button {
+    width: 20vw;
+    height: 50px;
+    font-size: x-large;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 20px red;
+    background-color: red;
+}
+.button:hover {
+    animation: buttonAnimation 1s forwards;
+}
+.buttonClick {
+    width: 20vw;
+    height: 50px;
+    font-size: x-large;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 40px deeppink, 0 0 120px pink;
+    background-color: red;
+    animation: buttonAbyss 2s forwards;
+}
+.photo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+.when {
+    opacity: 0;
+}
+.whenClick {
+    animation: whenAnimation 4s forwards;
+    display: block;
+    font-size: 50px;
+    text-shadow: 0 0 10px pink, 0 0 20px red;
+}
+
+.text {
+    white-space: pre-line;
+    display: grid;
+    place-items: center;
+    font-size: 50px;
+    text-shadow: 0 0 5px pink, 0 0 10px deeppink;
+    margin-top: 37vh;
+    text-align: center;
+}
