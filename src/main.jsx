@@ -87,7 +87,10 @@ function Main() {
             { view &&
                 <>
                     {count <= 28 &&
-                        <img className="photo" src={images[`./image/${count}.jpg`]} alt="❤️" />
+                        <>
+                            <h1 style={{color:"white", position:"absolute", zIndex:999}}>{count}</h1>
+                            <img className="photo" src={images[`./image/${count}.jpg`]} alt="❤️" />
+                        </>
                     }
                     {count > 28 &&
                         <p className="text">{showText}</p>
